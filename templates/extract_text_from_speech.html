@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../static/css/main.css"/>
+    <title>Chuyển đổi âm thanh</title>
+</head>
+<body>
+<div id="hmm">
+    <div class="hmm1">
+        <div id="Doiclass" class="album">
+            <a href="/reset_uploaded_files">
+                <svg class="album__return" height="12px" viewBox="0 0 18 12"
+                     width="18px">
+                    <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none"
+                       stroke-width="1">
+                        <g fill="#000000" id="Core"
+                           transform="translate(-87.000000, -342.000000)">
+                            <g id="menu"
+                               transform="translate(87.000000, 342.000000)">
+                                <path d="M0,12 L18,12 L18,10 L0,10 L0,12 L0,12 Z M0,7 L18,7 L18,5 L0,5 L0,7 L0,7 Z M0,0 L0,2 L18,2 L18,0 L0,0 L0,0 Z"
+                                      id="Shape"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+            <div class="album__reflection"></div>
+            <div class="album__player" id="leftReplacement">
+                <div class="album__song">
+                    <h2 class="album__song__album">
+                        <marquee scrollamount="3">
+                            <!-- SOMEBODY STOP ME -->
+                            Cảm ơn bạn vì đã sử dụng trang web của chúng tôi!
+                        </marquee>
+                    </h2>
+                    <h2 class="album__song__position"></h2>
+                    <h1 class="album__song__title" id="audioM">
+                        Xin chào!!!
+                    </h1>
+                </div>
+                <div class="album__controls">
+                    <!--                    <svg class="album__prev" height="12px" viewBox="0 0 18 12"-->
+                    <!--                         width="18px">-->
+                    <!--                        <g fill="none" fill-rule="evenodd" id="Page-1"-->
+                    <!--                           stroke="none" stroke-width="1">-->
+                    <!--                            <g fill="#000000" id="Icons-AV"-->
+                    <!--                               transform="translate(-43.000000, -5.000000)">-->
+                    <!--                                <g id="fast-forward"-->
+                    <!--                                   transform="translate(43.000000, 5.000000)">-->
+                    <!--                                    <path d="M0,12 L8.5,6 L0,0 L0,12 L0,12 Z M9,0 L9,12 L17.5,6 L9,0 L9,0 Z"-->
+                    <!--                                          id="Shape"/>-->
+                    <!--                                </g>-->
+                    <!--                            </g>-->
+                    <!--                        </g>-->
+                    <!--                    </svg>-->
+<!--                    <button id="play-button" height="20"-->
+<!--                            class="play-button album__play">-->
+<!--                        <i class="fas fa-play"></i>-->
+<!--                    </button>-->
+                    <!--                    <svg class="album__next" height="12px" viewBox="0 0 18 12"-->
+                    <!--                         width="18px">-->
+                    <!--                        <g fill="none" fill-rule="evenodd" id="Page-1"-->
+                    <!--                           stroke="none" stroke-width="1">-->
+                    <!--                            <g fill="#000000" id="Icons-AV"-->
+                    <!--                               transform="translate(-43.000000, -5.000000)">-->
+                    <!--                                <g id="fast-forward"-->
+                    <!--                                   transform="translate(43.000000, 5.000000)">-->
+                    <!--                                    <path d="M0,12 L8.5,6 L0,0 L0,12 L0,12 Z M9,0 L9,12 L17.5,6 L9,0 L9,0 Z"-->
+                    <!--                                          id="Shape"/>-->
+                    <!--                                </g>-->
+                    <!--                            </g>-->
+                    <!--                        </g>-->
+                    <!--                    </svg>-->
+                </div>
+                <div class="album__song__scrubber">
+<!--                    <input type="range" class=" album__song__scrubber"-->
+<!--                           id="time-slider" min="0" step="0.01">-->
+<!--                    <div class="album__song__current-time time-label"-->
+<!--                         id="current-time">00:00-->
+<!--                    </div>-->
+<!--                    <div class="album__song__full-length duration-label"-->
+<!--                         id="duration">00:00-->
+<!--                    </div>-->
+                </div>
+            </div>
+            <div class="text-output album__art">
+                <div id="chiaHai" class="">
+                    <div class="colHai">
+                        <div class="container">
+                            <div class="card input-wrapper">
+                                <!--                                <div class="from">-->
+                                <!--                                    <span class="heading">From :</span>-->
+                                <!--                                    <div class="dropdown-container"-->
+                                <!--                                         id="input-language">-->
+                                <!--                                        <div class="dropdown-toggle">-->
+                                <!--                                            <ion-icon-->
+                                <!--                                                    name="globe-outline"></ion-icon>-->
+                                <!--                                            <span class="selected"-->
+                                <!--                                                  data-value="auto">Auto Detect</span>-->
+                                <!--                                            <ion-icon-->
+                                <!--                                                    name="chevron-down-outline"></ion-icon>-->
+                                <!--                                        </div>-->
+                                <!--                                        <ul class="dropdown-menu">-->
+                                <!--                                            <li class="option active">DropDown-->
+                                <!--                                                Menu Item 1-->
+                                <!--                                            </li>-->
+                                <!--                                            <li class="option">DropDown Menu-->
+                                <!--                                                Item 2-->
+                                <!--                                            </li>-->
+                                <!--                                        </ul>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+                                <div class="text-area " id="contentReplacement">
+                                    <!--                              <textarea class="dynamic-content"-->
+                                    <!--                                        id="input-text"-->
+                                    <!--                                        cols="30"-->
+                                    <!--                                        rows="15"-->
+                                    <!--                                        placeholder="Enter your text here"-->
+                                    <!--                              ></textarea>-->
+                                    <h2 class="t-content">
+                                        Chào mừng bạn đến với trang web này!!
+                                    </h2>
+                                    <div id="content" style="margin-top: 10px;">
+                                        Các tệp âm thanh của bạn nằm bên tay phải, nhấp vào để xem bản chuyển đổi văn bản của chúng!
+                                    </div>
+                                    <div class="chars"><span
+                                            id="input-chars"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <h2 class="textM t-content " id="">
+                          Văn bản
+                        </h2>
+                        <p class="dynamic-content">
+                          Phiên bản "1.35.0" mà bạn đề cập không được đưa ra rõ ràng trong ngữ cảnh cụ thể.
+                          Tuy nhiên, trong nhiều trường hợp, số phiên bản như "1.35.0" đều liên quan đến phiên
+                          bản của một sản phẩm, công nghệ, hoặc thư viện cụ thể.
+                        </p> -->
+                    </div>
+                    <div id="coDon" class="colDon">
+                        <div class="container">
+                            <div class="center">
+                                <div class="swap-position">
+                                    <ion-icon
+                                            name="swap-horizontal-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="card output-wrapper">
+                                <div class="to">
+                                    <span class="heading">To :</span>
+                                    <div class="dropdown-container"
+                                         id="output-language">
+                                        <div class="dropdown-toggle">
+                                            <ion-icon
+                                                    name="globe-outline"></ion-icon>
+                                            <span class="selected"
+                                                  data-value="en">English</span>
+                                            <ion-icon
+                                                    name="chevron-down-outline"></ion-icon>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li class="option active">DropDown
+                                                Menu Item 1
+                                            </li>
+                                            <li class="option">DropDown Menu
+                                                Item 2
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <textarea
+                                        id="output-text"
+                                        cols="30"
+                                        rows="10"
+                                        placeholder="Translated text will appear here"
+                                        disabled
+                                ></textarea>
+                                <div class="card-bottom">
+                                    <p>Download as a document!</p>
+                                    <button id="download-btn">
+                                        <span>Download</span>
+                                        <ion-icon
+                                                name="cloud-download-outline"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- <h2 class="textM t-content " id="">
+                          Văn bản
+                        </h2>
+                        <p class="dynamic-content">
+                          Phiên bản "1.35.0" mà bạn đề cập không được đưa ra rõ ràng trong ngữ cảnh cụ thể.
+                          Tuy nhiên, trong nhiều trường hợp, số phiên bản như "1.35.0" đều liên quan đến phiên
+                          bản của một sản phẩm, công nghệ, hoặc thư viện cụ thể.
+                        </p> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="butCen" id="buttonContainer"></div>
+            <div class="button-85"></div>
+            <button id="mute-button" class="mute-button album__volume">
+                <i class="fas fa-volume-up"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+    const buttonContainer = document.getElementById('buttonContainer');
+    const divHasToReplaceLeft = document.getElementById('leftReplacement');
+    const divHasToReplaceContent = document.getElementById('contentReplacement');
+    // Create a button element inside html
+    function create_button(id, name) {
+        let buttonElement = document.createElement('button');
+        buttonElement.id = id;
+        buttonElement.className = 'button-73';
+        buttonElement.innerText = name;
+        buttonContainer.appendChild(buttonElement);
+    }
+    // Get uploaded_files
+    const uploaded_files = {{ uploaded_files | tojson }};
+    // Create buttons and content consistently
+    const buttons = [];
+    const replace_lefts = [];
+    const replace_contents = [];
+    // Hàm định dạng thời gian (mm:ss)
+    function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${padZero(minutes)}:${padZero(seconds)}`;
+    }
+
+    // Hàm thêm số 0 vào đầu nếu số chỉ có 1 chữ số
+    function padZero(num) {
+        return num.toString().padStart(2, '0');
+    }
+    for(let i = 0; i < uploaded_files.length; i++) {
+        // button here
+        let button = 'button' + (i+1);
+        let audio_name = 'Audio ' + (i+1);
+        create_button(button, name = audio_name);
+        buttons.push(button);
+        // left here
+        let play_button = 'play-button-' + (i+1);
+        let duration = 'duration-' + (i+1);
+        let time_slider = 'time-slider-' + (i+1);
+        let current_time = 'current-time-' + (i+1);
+        const replace_left = `
+            <div class="album__song">
+                <h2 class="album__song__album">
+                    <marquee scrollamount="3">
+                        <!-- SOMEBODY STOP ME -->
+                        ${uploaded_files[i]}
+                    </marquee>
+                </h2>
+                <h2 class="album__song__position"></h2>
+                <h1 class="album__song__title" id="audioM">
+                    Audio ${i+1}
+                </h1>
+            </div>
+            <div class="album__controls">
+                <!--                    <svg class="album__prev" height="12px" viewBox="0 0 18 12"-->
+                <!--                         width="18px">-->
+                <!--                        <g fill="none" fill-rule="evenodd" id="Page-1"-->
+                <!--                           stroke="none" stroke-width="1">-->
+                <!--                            <g fill="#000000" id="Icons-AV"-->
+                <!--                               transform="translate(-43.000000, -5.000000)">-->
+                <!--                                <g id="fast-forward"-->
+                <!--                                   transform="translate(43.000000, 5.000000)">-->
+                <!--                                    <path d="M0,12 L8.5,6 L0,0 L0,12 L0,12 Z M9,0 L9,12 L17.5,6 L9,0 L9,0 Z"-->
+                <!--                                          id="Shape"/>-->
+                <!--                                </g>-->
+                <!--                            </g>-->
+                <!--                        </g>-->
+                <!--                    </svg>-->
+                <button id=${play_button} height="20"
+                        class="play-button album__play">
+                    <i class='fas fa-play'></i>
+                </button>
+                <!--                    <svg class="album__next" height="12px" viewBox="0 0 18 12"-->
+                <!--                         width="18px">-->
+                <!--                        <g fill="none" fill-rule="evenodd" id="Page-1"-->
+                <!--                           stroke="none" stroke-width="1">-->
+                <!--                            <g fill="#000000" id="Icons-AV"-->
+                <!--                               transform="translate(-43.000000, -5.000000)">-->
+                <!--                                <g id="fast-forward"-->
+                <!--                                   transform="translate(43.000000, 5.000000)">-->
+                <!--                                    <path d="M0,12 L8.5,6 L0,0 L0,12 L0,12 Z M9,0 L9,12 L17.5,6 L9,0 L9,0 Z"-->
+                <!--                                          id="Shape"/>-->
+                <!--                                </g>-->
+                <!--                            </g>-->
+                <!--                        </g>-->
+                <!--                    </svg>-->
+            </div>
+            <div class="album__song__scrubber">
+                <input type="range" class=" album__song__scrubber"
+                       id=${time_slider} min="0" step="0.01">
+                <div class="album__song__current-time time-label"
+                     id=${current_time}>00:00
+                </div>
+                <div class="album__song__full-length duration-label"
+                     id=${duration}>00:00
+                </div>
+            </div>
+        `;
+        replace_lefts.push(replace_left);
+        const t_id = "content" + (i+1)
+        // content here
+        const replace_content = `
+            <h2 class = "t-content" >
+                Generation Text ${i+1}
+            </h2>
+            <div id=${t_id} style="margin-top: 10px;"></div>
+            <div class="chars">
+                <span id="input-chars"></span>
+            </div>
+        `;
+        replace_contents.push(replace_content);
+    }
+    // Button event - click
+    const all_Text = {{ word_List | tojson }};
+    for (let i = 0; i < buttons.length; i++) {
+        console.log(all_Text[i])
+        let button = document.getElementById(buttons[i]);
+        button.addEventListener('click', function () {
+            divHasToReplaceLeft.innerHTML = replace_lefts[i];
+            divHasToReplaceContent.innerHTML = replace_contents[i];
+            const contentid = "content"+(i+1);
+            const contentDiv = document.getElementById(contentid);
+            contentDiv.textContent = all_Text[i].join(" ");
+
+            let play_button = 'play-button-' + (i+1);
+            let duration = 'duration-' + (i+1);
+            let time_slider = 'time-slider-' + (i+1);
+            let current_time = 'current-time-' + (i+1);
+            const playButton = document.getElementById(play_button);
+            const timeSlider = document.getElementById(time_slider);
+            const durationLabel = document.getElementById(duration);
+            const currentTimeLabel = document.getElementById(current_time);
+            const audio = new Audio();
+            // audio.src = '../static/audios/' + uploaded_files[i];
+            audio.src = '../static/audios/CMNQ.mp3';
+            console.log(audio.src)
+            // Lưu âm thanh gốc
+            const originalAudioSrc = audio.src;
+
+            // Xử lý sự kiện khi nút play được nhấn
+            playButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    audio.pause();
+                    playButton.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            });
+            // Xử lý sự kiện khi trạng thái phát/tạm dừng của audio thay đổi
+            audio.addEventListener('playing', function () {
+                playButton.innerHTML = '<i class="fas fa-pause"></i>';
+            });
+
+            audio.addEventListener('pause', function () {
+                playButton.innerHTML = '<i class="fas fa-play"></i>';
+            });
+
+            // Xử lý sự kiện khi thanh thời gian được di chuyển
+            timeSlider.addEventListener('input', function () {
+                audio.currentTime = timeSlider.value;
+            });
+
+            // Xử lý sự kiện khi audio đã tải xong metadata
+            audio.addEventListener('loadedmetadata', function () {
+                const duration = audio.duration;
+                timeSlider.max = duration;
+                timeSlider.step = 0.01;
+                durationLabel.innerText = formatTime(duration);
+            });
+
+            // Cập nhật hiển thị thời gian hiện tại và thanh thời gian
+            audio.addEventListener('timeupdate', function () {
+                const currentTime = audio.currentTime;
+                currentTimeLabel.innerText = formatTime(currentTime);
+                timeSlider.value = currentTime;
+            });
+        });
+    }
+
+</script>
+<!--<script src="../static/js/play_audio.js"></script>-->
+<script src="../static/js/script.js"></script>
+<script src="../static/js/smooth_appear.js"></script>
+<script src="../static/js/languages.js"></script>
+<script src="../static/js/test.js"></script>
+<!--<script>-->
+<!--    const eventSource = new EventSource("/stream");-->
+<!--    eventSource.onmessage = function (event) {-->
+<!--        const contentDiv = document.getElementById("content");-->
+<!--        const newWord = document.createTextNode(event.data + " ");-->
+<!--        contentDiv.appendChild(newWord);-->
+<!--    };-->
+<!--    // Allows this page run again when being refreshed or accessed.-->
+<!--    eventSource.addEventListener('close', function (event) {-->
+<!--        eventSource.close();-->
+<!--    });-->
+<!--    // Tell system that the task finished and stopped generate.-->
+<!--    eventSource.onerror = function (event) {-->
+<!--        eventSource.close();-->
+<!--    };-->
+<!--</script><script>-->
+<!--    const eventSource = new EventSource("/stream");-->
+<!--    eventSource.onmessage = function (event) {-->
+<!--        const contentDiv = document.getElementById("content");-->
+<!--        const newWord = document.createTextNode(event.data + " ");-->
+<!--        contentDiv.appendChild(newWord);-->
+<!--    };-->
+<!--    // Allows this page run again when being refreshed or accessed.-->
+<!--    eventSource.addEventListener('close', function (event) {-->
+<!--        eventSource.close();-->
+<!--    });-->
+<!--    // Tell system that the task finished and stopped generate.-->
+<!--    eventSource.onerror = function (event) {-->
+<!--        eventSource.close();-->
+<!--    };-->
+<!--</script>-->
+</body>
+</html>
