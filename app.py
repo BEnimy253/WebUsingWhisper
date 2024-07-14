@@ -21,8 +21,12 @@ SAVE_AUDIOS_FOLDER = os.path.join(os.path.dirname(__file__),
                                   'inference/audio_files')
 INFERENCE_AUDIOS = os.path.join(os.path.dirname(__file__),
                                 'static/audios')
+WAV_AUDIOS = os.path.join(os.path.dirname(__file__),
+                          'inference/wav_files')
 if not os.path.exists(SAVE_AUDIOS_FOLDER):
     os.makedirs(SAVE_AUDIOS_FOLDER)
+if not os.path.exists(WAV_AUDIOS):
+    os.makedirs(WAV_AUDIOS)
 if not os.path.exists(INFERENCE_AUDIOS):
     os.makedirs(INFERENCE_AUDIOS)
 # Create global upload path
