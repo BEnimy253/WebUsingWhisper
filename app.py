@@ -1,5 +1,5 @@
 from flask import (Flask, render_template, Response, request, redirect, url_for,
-                   jsonify)
+                   jsonify, send_from_directory)
 from MyModel.test import speech2text
 from inference.resample import resample
 import time
@@ -114,25 +114,46 @@ def reset_uploaded_files():
 
 
 # Access upload.php and save uploaded files
-@app.route('/templates/upload.php', methods=['POST'])
+@app.route('/upload', methods=['POST'])
 def upload_file():
     global uploaded_files
     if request.method == 'POST':
+        if 'file' not in request.files:
+            return 'No file received.', 400
+
         file = request.files['file']
+        if file.filename == '':
+            return 'No selected file.', 400
+
         if file:
-            split_filename = file.filename.split('.')
-            print(split_filename)
-            if split_filename[-1] not in ['wav', 'm4a', 'mp3']:
-                print("Not in")
-            else:
-                print("OK")
-                file_path = os.path.join(app.config['SAVE_AUDIOS_FOLDER'],
-                                         file.filename)
-                file.save(file_path)
-                uploaded_files.append(file.filename)
-            return 'File uploaded successfully!'
+            file_path = os.path.join(app.config['SAVE_AUDIOS_FOLDER'],
+                                     file.filename)
+            file.save(file_path)
+            uploaded_files.append(file.filename)
+            return 'File uploaded.'
         else:
-            return 'No file received.'
+            return 'No file received.', 400
+
+        # file = request.files['file']
+        # if file:
+        #     split_filename = file.filename.split('.')
+        #     print(split_filename)
+        #     if split_filename[-1] not in ['wav', 'm4a', 'mp3']:
+        #         print("Not in")
+        #     else:
+        #         print("OK")
+        #         file_path = os.path.join(app.config['SAVE_AUDIOS_FOLDER'],
+        #                                  file.filename)
+        #         file.save(file_path)
+        #         uploaded_files.append(file.filename)
+        #     return 'File uploaded successfully!'
+        # else:
+        #     return 'No file received.'
+
+
+@app.route('/getaudio/<filename>')
+def inference(filename):
+    return send_from_directory('inference/audio_files', filename)
 
 
 if __name__ == '__main__':

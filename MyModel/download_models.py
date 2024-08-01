@@ -23,13 +23,13 @@ if __name__ == "__main__":
     # dir_to_save_model = "./Whisper_large_v3_model/"
     # dir_to_save_processor = "./Whisper_large_v3_processor/"
 
-    # model_to_download = 'openai/whisper-small'
-    # dir_to_save_model = "./Whisper_small_model/"
-    # dir_to_save_processor = "./Whisper_small_processor/"
+    model_to_download = 'openai/whisper-small'
+    dir_to_save_model = "./Whisper_small_model/"
+    dir_to_save_processor = "./Whisper_small_processor/"
 
-    model_to_download = 'openai/whisper-base'
-    dir_to_save_model = "./Whisper_base_model/"
-    dir_to_save_processor = "./Whisper_base_processor/"
+    # model_to_download = 'openai/whisper-base'
+    # dir_to_save_model = "./Whisper_base_model/"
+    # dir_to_save_processor = "./Whisper_base_processor/"
 
     download_model(model_name=model_to_download,
                    model_dir=dir_to_save_model,

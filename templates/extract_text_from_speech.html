@@ -350,7 +350,7 @@
             const currentTimeLabel = document.getElementById(current_time);
             const audio = new Audio();
             // audio.src = '../static/audios/' + uploaded_files[i];
-            audio.src = '../static/audios/CMNQ.mp3';
+            audio.src = `/getaudio/${uploaded_files[i]}`;
             console.log(audio.src)
             // Lưu âm thanh gốc
             const originalAudioSrc = audio.src;
